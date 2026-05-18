@@ -290,13 +290,13 @@ td:first-child{text-align:center;font-family:'JetBrains Mono',monospace;font-siz
 /* ── FACEBOOK STRIP ── */
 .fb-strip{
   display:flex;align-items:center;justify-content:center;gap:14px;
-  margin-top:40px;padding:28px 32px;
+  margin-top:40px;padding:20px 24px;
   background:var(--surface);
   border:1px solid var(--border);
   border-radius:6px;
   position:relative;
   overflow:hidden;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
 }
 .fb-strip::before{
   content:'';
@@ -307,20 +307,23 @@ td:first-child{text-align:center;font-family:'JetBrains Mono',monospace;font-siz
 .fb-label{
   font-family:'Outfit',sans-serif;
   font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:600;
-  color:var(--text3);margin-right:8px;
+  color:var(--text3);margin-right:4px;
   flex-shrink:0;
 }
 .fb-btn{
-  display:inline-flex;align-items:center;gap:10px;
+  display:inline-flex;align-items:center;gap:8px;
   color:var(--text);text-decoration:none;
   font-family:'Outfit',sans-serif;
-  font-size:13px;font-weight:600;letter-spacing:1px;
+  font-size:12px;font-weight:600;letter-spacing:0.5px;
   border:1px solid var(--border);
   background:var(--surface2);
-  padding:10px 22px;border-radius:5px;
+  padding:9px 14px;border-radius:5px;
   transition:all .22s;
   position:relative;overflow:hidden;
-  min-width:130px;justify-content:center;
+  white-space:nowrap;
+  flex:1;
+  min-width:0;
+  justify-content:space-between;
 }
 .fb-btn::before{
   content:'';
@@ -345,22 +348,21 @@ td:first-child{text-align:center;font-family:'JetBrains Mono',monospace;font-siz
 .fb-btn:hover .fb-icon{opacity:1;}
 .fb-region{
   font-family:'JetBrains Mono',monospace;
-  font-size:11px;letter-spacing:3px;font-weight:700;
-  color:#03080f;margin-left:2px;
+  font-size:10px;letter-spacing:2px;font-weight:700;
+  color:#03080f;margin-left:auto;
   background:var(--cyan);
-  padding:3px 9px;border-radius:3px;
+  padding:3px 7px;border-radius:3px;
   transition:all .22s;
   text-transform:uppercase;
   box-shadow:0 0 8px rgba(56,189,248,0.35);
+  flex-shrink:0;
 }
 .fb-btn:hover .fb-region{
   background:#fff;
   box-shadow:0 0 12px rgba(56,189,248,0.5);
 }
 @media(max-width:580px){
-  .fb-strip{flex-direction:column;gap:10px;}
-  .fb-label{margin-right:0;margin-bottom:4px;}
-  .fb-btn{width:100%;max-width:280px;}
+  .fb-strip{overflow-x:auto;}
 }
 </style>
 </head>
